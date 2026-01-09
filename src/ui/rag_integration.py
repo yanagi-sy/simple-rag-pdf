@@ -108,28 +108,10 @@ class RAGIntegration:
                 # 検索開始メッセージを表示
                 self.ui.root.after(0, lambda: self.ui.message_handler.add_system_message("検索中..."))
                 
-                # ハイブリッド検索とリランキングを実行
-                # k=5: 最終的に使用するチャンク数
-                # w_sem, w_key: Semantic検索とKeyword検索の重み
-                # candidate_k=60: リランキング前の候補数
-                top_docs = self.rag_system.search(
-                    question=user_input,
-                    k=5,
-                    w_sem=w_sem,
-                    w_key=w_key,
-                    candidate_k=60
-                )
-                
-                # 検索結果のコンテキストを構築
-                context = "\n\n".join(doc.page_content for doc in top_docs)
-                
-                # プロンプトテンプレートを適用
-                prompt = self.prompt_template.format(context=context, question=user_input)
-                
                 # 回答生成開始メッセージを表示
                 self.ui.root.after(0, lambda: self.ui.message_handler.add_system_message("回答を生成中..."))
                 
-                # LLMで回答を生成
+                # LLMで回答を生成（内部で検索とプロンプト生成が行われる）
                 raw_answer = self.rag_system.answer(
                     question=user_input,
                     k=5,

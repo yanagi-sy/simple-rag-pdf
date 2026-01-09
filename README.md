@@ -104,12 +104,7 @@ simple_rag.py/
 │       └── rag_integration.py        # RAG統合
 ├── scripts/                           # 実行スクリプト
 │   └── run_ui.sh                      # UI起動スクリプト
-├── examples/                          # サンプルコード
-│   ├── chatbot_example.py
-│   └── prompt_template_demo.py
 ├── chroma_db/                         # ベクトルデータベース（自動生成）
-├── old/                               # 古いファイル（リファクタリング前のファイルを保持）
-├── pdf_rag.py                         # 後方互換性のためのインポートリダイレクト
 ├── README.md                          # このファイル
 └── venv311/                           # 仮想環境
 ```

@@ -1,4 +1,3 @@
-nano .gitignore
 # Python virtual environment
 venv/
 venv311/
@@ -7,6 +6,22 @@ venv311/
 # Python cache
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
 # OS files
 .DS_Store
+Thumbs.db
+
+# Chroma DB (auto-generated)
+chroma_db/
+.chroma_*
+
+# Test files
+*.pdf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

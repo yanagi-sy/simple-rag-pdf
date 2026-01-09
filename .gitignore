@@ -17,9 +17,6 @@ Thumbs.db
 chroma_db/
 .chroma_*
 
-# Test files
-*.pdf
-
 # IDE
 .vscode/
 .idea/

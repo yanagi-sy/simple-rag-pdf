@@ -66,8 +66,8 @@ ollama pull llama3:latest
 ### 4. アプリケーションの実行
 
 ```bash
-# プロジェクトディレクトリに移動
-cd ~/simple_rag.py
+# プロジェクトルートに移動
+cd ~/simple_rag
 
 # 実行スクリプトを使用（推奨）
 ./scripts/run_ui.sh
@@ -80,7 +80,7 @@ python -m src.ui.terminal
 ## ディレクトリ構成
 
 ```
-simple_rag.py/
+simple_rag/
 ├── src/                               # ソースコード
 │   ├── __init__.py
 │   ├── rag/                           # RAGシステムコア

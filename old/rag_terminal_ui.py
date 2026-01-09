@@ -41,8 +41,11 @@ import sys
 # =========================================
 # 既存のRAGコードをインポート
 # =========================================
-# pdf_rag.pyから、PDFを読み込むクラスとRAG検索を行うクラスをインポート
-from pdf_rag import PDFRagSystem, ReRankingRAG, MultiSourceRagSystem, MultiSourceReRankingRAG
+# 分割されたモジュールから、必要なクラスをインポート
+from pdf_loader import PDFRagSystem
+from reranking_rag import ReRankingRAG
+from multi_source_rag import MultiSourceRagSystem
+from multi_source_reranking_rag import MultiSourceReRankingRAG
 # PromptTemplate: LLMへの指示文を管理するためのテンプレート
 from langchain.prompts import PromptTemplate
 # Document: 文書データを表現するためのクラス
